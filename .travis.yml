@@ -21,12 +21,6 @@ script:
   - npm run test-ci
   - npm run build:ssr
 after_success:
-<<<<<<< HEAD
   - if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase use prod && firebase deploy --token $FIREBASE_TOKEN; fi
   - 'if [ $TRAVIS_BRANCH == "develop" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase use default && firebase deploy --token $FIREBASE_TOKEN; fi'
   - npm run lighthouse-ci
-=======
-- if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase use prod && firebase deploy --token $FIREBASE_TOKEN; fi
-- 'if [ $TRAVIS_BRANCH == "develop" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase use default && firebase deploy --token $FIREBASE_TOKEN; fi'
-- npm run lighthouse-ci
->>>>>>> cf42de76b25a0dfb42a142c68e85b3f197400960
