@@ -11,6 +11,7 @@ script:
   - npm run test-ci
   - npm run build:ssr
 after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" && $TRAVIS_BRANCH == "master" ]; then firebase deploy --token $FIREBASE_TOKEN'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" && $TRAVIS_BRANCH == "master" ]; then firebase deploy -p hapkido-website --token $FIREBASE_TOKEN'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" && $TRAVIS_BRANCH == "develop" ]; then firebase deploy --token $FIREBASE_TOKEN'
 after_script:
   - npm run lighthouse-ci
