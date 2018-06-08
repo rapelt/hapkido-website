@@ -13,6 +13,7 @@ script:
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
   - npm run lighthouse
+  - npm run lighthouse-report
 notifications:
   email:
     on_failure: change
