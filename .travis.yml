@@ -1,6 +1,9 @@
 language: node_js
 node_js:
  - "10"
+branches:
+ only:
+ - master
 cache:
  directories:
    - "node_modules"
@@ -12,9 +15,5 @@ script:
   - npm run build:ssr
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
-  - npm run lighthouse
-  - npm run lighthouse-report
-notifications:
-  email:
-    on_failure: change
-    on_success: change
+after_script:
+  - npm run lighthouse-ci
