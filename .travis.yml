@@ -9,17 +9,12 @@ before_script:
  - npm install -g firebase-tools
  - 'echo $TRAVIS_BRANCH'
  - 'echo $TRAVIS_PULL_REQUEST'
- - 'echo $TRAVIS_PULL_REQUEST_BRANCH'
 
 script:
   - npm run test-ci
   - npm run build:ssr
 after_success:
-  - 'if [ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]; then
-        firebase deploy -p hapkido-website --token $FIREBASE_TOKEN;
-      fi'
-  - 'if [ $TRAVIS_BRANCH == "develop" && $TRAVIS_PULL_REQUEST == "false" ]; then
-        firebase deploy --token $FIREBASE_TOKEN;
-      fi'
+  - if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase deploy -p hapkido-website --token $FIREBASE_TOKEN; fi
+  - 'if [ $TRAVIS_BRANCH == "develop" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then firebase deploy --token $FIREBASE_TOKEN; fi'
 after_script:
   - npm run lighthouse-ci
