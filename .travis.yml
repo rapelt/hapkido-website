@@ -7,6 +7,10 @@ cache:
    - "functions/node_modules"
 script:
   - npm run test-ci
+  - npm run build:ssr
+deploy:
+  provider: firebase
+  token:
+    secure: DQk4IXPaIexb5gJCs0KNqgPVoxlG9pYqkZbYwMk3uV9mg3yiisCG5MSmqmZFVw7oiaudgBq9N6ji6MglFkJ1uakeup25/lH2UrKfnF9eEHO43F5oDp9w2X7fgGa/iZWfWCiEHx7r2ktYHIPiczaFw+5Mg2sP43YfdwDmPcMHEetnSRN8nduMEcj/K4J5PjOWcyMqvDs1yEmBDmb/lsNi19hce76RfQUiNLKWO4LQ98GjOW+MGbAL30eeSOcfBzoqoJyPayWuLQuKRpo0FaVvOIA5ciseFgRHpHipjwSbBubQbbLf5jE3WW9KmtK694f6P2pfi7AH1A3av0DBvtmswSa+G/gYtw1Jr1BC9Z2OmGnllPzGWw9z7ge+Fq0yoMC7jcRC6ge1IRvibeQM7tjR7f/wVjjN4b1lCy9rqijkWkMUx4GlZpnyC14bdkh8i0ni/9bIAiNVdhVtNqQK0FV9r6pdsUaraqvxXp/5XU16eACbHcxTIEst4At0R8WO3++4djCZ/h10za9QrqugVXiw/GN6dbOSqPpZb9zMO3cglD9RyNA6ICmQ2stfRs2Jr1m6gv3PPAtSq8P9X/gdfB3tCh8XjlMuv/+QVMBzvRHfNrveDBVWQkgm7r0okJszSLgMP2/LBlwePfaI+ue7NcrjK/q7adSgXtt6X7D2J9n5U68=
 after_success:
-  - npm run build-and-deploy
   - npm run lighthouse
