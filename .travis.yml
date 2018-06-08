@@ -14,6 +14,6 @@ script:
   - npm run test-ci
   - npm run build:ssr
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then firebase deploy --token $FIREBASE_TOKEN'
 after_script:
   - npm run lighthouse-ci
