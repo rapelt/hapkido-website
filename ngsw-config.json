@@ -10,6 +10,9 @@
         "/*.css",
         "/*.js"
       ]
+    },
+    "cacheConfig": {
+      "maxAge": "60d"
     }
   }, {
     "name": "assets",
