@@ -1,0 +1,6 @@
+@import '~@angular/material/theming';
+@import "../../hapkido-theme";
+
+.mat-toolbar {
+  background-color: mat-color($candy-app-primary, 900);
+}
