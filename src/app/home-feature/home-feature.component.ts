@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home-feature',
@@ -7,6 +7,11 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 })
 export class HomeFeatureComponent implements OnInit {
   shouldPlayVideo = false;
+
+  @HostListener('document:fullscreenchange', []) fullScreen() {
+    console.log('Blarg');
+  }
+
 
   constructor() { }
 
