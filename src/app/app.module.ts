@@ -13,6 +13,7 @@ import {Angulartics2GoogleTagManager} from 'angulartics2/gtm';
 import {MaterialModule} from './material/material.module';
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
+import {GoogleAnalyticsService} from './services/google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import {FeatureImageComponent} from './shared-components/feature-image/feature-i
     Angulartics2Module.forRoot([Angulartics2GoogleTagManager]),
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    GoogleAnalyticsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
