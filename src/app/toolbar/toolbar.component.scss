@@ -1,0 +1,74 @@
+
+@import '~@angular/material/theming';
+@import "../../hapkido-theme";
+@import "../../variables";
+
+.mat-toolbar-single-row {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 0px;
+}
+
+.social-media-icons {
+  i {
+    color: white;
+    font-size: 0.8em;
+    width: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    border: 1px solid white;
+    border-radius: 0.8em;
+    margin: 0px 5px;
+  }
+
+  :hover {
+    i {
+      color: mat-color($candy-app-accent);
+    }
+  }
+
+}
+
+.location {
+
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
+
+
+  a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 5px;
+    margin-top: 3px;
+  }
+
+  :hover {
+    i {
+      color: mat-color($candy-app-accent);
+    }
+
+    color: mat-color($candy-app-accent);
+  }
+}
+
+.tool-bar {
+  display: flex;
+  justify-content: space-between;
+  width: $max-site-width;
+  line-height: 100%;
+
+  @media (max-width: $breakpoint-sm) {
+    justify-content: flex-end;
+  }
+}

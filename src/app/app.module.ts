@@ -8,24 +8,27 @@ import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { Page1Component } from './page1/page1.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HeaderComponent} from './header/header.component';
-import {MatToolbarModule} from '@angular/material';
-import {HomeFeatureComponent} from './home-feature/home-feature.component';
+import {Angulartics2Module} from 'angulartics2';
+import {Angulartics2GoogleTagManager} from 'angulartics2/gtm';
+import {MaterialModule} from './material/material.module';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     Page1Component,
-    HeaderComponent,
-    HomeFeatureComponent
+    ToolbarComponent,
+    FeatureImageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    MatToolbarModule
+    Angulartics2Module.forRoot([Angulartics2GoogleTagManager]),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

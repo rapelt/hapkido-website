@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+@import "./hapkido-theme";
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$max-site-width: 1200px;
+
+
+$primary-blue: #2962ff;
+$primary-red: #b71c1c;
+
+$primary-grey: #424242;
