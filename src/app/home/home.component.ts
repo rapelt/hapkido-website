@@ -1,4 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import * as screenfull from 'screenfull';
+
 
 
 @Component({
@@ -10,26 +12,25 @@ export class HomeComponent implements OnInit {
 
   shouldPlayVideo = false;
 
-  @HostListener('document:fullscreenchange', []) fullScreen() {
-    console.log('Blarg');
-  }
-
   constructor() { }
 
   ngOnInit() {
+    screenfull.on('change', () => {
+      const elem: HTMLVideoElement = <HTMLVideoElement> document.getElementById('backgroundvid');
+
+      if (screenfull.isFullscreen) {
+        elem.play();
+      } else {
+        elem.pause();
+        elem.load();
+      }
+    });
   }
 
   playVideo() {
     this.shouldPlayVideo = true;
     const elem: HTMLVideoElement = <HTMLVideoElement> document.getElementById('backgroundvid');
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen();
-    }
-
-    elem.play();
-
+    screenfull.request(elem);
   }
 
 }
