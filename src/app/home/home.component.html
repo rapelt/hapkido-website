@@ -32,8 +32,13 @@
               <img class="play-icon" src="assets/icons/playvideo.png" alt="Play video">
             </button>
 
+         <!--   <iframe *ngIf="shouldPlayVideo" id="backgroundvid" src="http://www.youtube.com/embed/W7qWa52k-nE"
+                    frameborder="0" allowfullscreen></iframe>
+-->
             <video controls id="backgroundvid" preload="auto">
               <source src="assets/video/hbw-video.mp4" type="video/mp4">
+              <source src="assets/video/hbw-video.webm" type="video/webm">
+
               <p>This browser does not support the video element.</p>
             </video>
           </div>
@@ -43,6 +48,11 @@
 
     </div>
   </section>
+  <div class="hb-section">
+    <h2 class="hb-title">Hapkido <span class="color-blue">Brisbane</span></h2>
+    <h3>Integrity - Respect - Discipline</h3>
+  </div>
+
 </div>
 
 <!--

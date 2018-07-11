@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
         elem.play();
         this.analytics.send('Start', 'Video - 30 Seconds of Hapkido', Math.floor(elem.currentTime).toString() + ' seconds');
       } else {
+        this.shouldPlayVideo = false;
         elem.pause();
         this.analytics.send('Stop', 'Video - 30 Seconds of Hapkido', Math.floor(elem.currentTime).toString() + ' seconds');
         elem.load();
