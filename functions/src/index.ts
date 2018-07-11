@@ -6,8 +6,8 @@ import * as express from 'express';
 const path = require('path');
 
 const { AppServerModuleNgFactory, LAZY_MODULE_MAP} = require('./main');
-import { ngExpressEngine } from  '@nguniversal/express-engine';
-import { provideModuleMap } from  '@nguniversal/module-map-ngfactory-loader';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 enableProdMode();
 

@@ -6,7 +6,7 @@
 /out-tsc
 /lighthouse/report.json
 /lighthouse/report.html
-
+/functions/lib/
 
 # dependencies
 /node_modules

@@ -8,8 +8,14 @@
         "/favicon.ico",
         "/index.html",
         "/*.css",
-        "/*.js"
+        "/*.js",
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
       ]
+    },
+    "cacheConfig": {
+      "maxAge": "60d"
     }
   }, {
     "name": "assets",
@@ -18,7 +24,10 @@
     "resources": {
       "files": [
         "/assets/**"
-      ]
+      ],
+      "cacheConfig": {
+        "maxAge": "60d"
+      }
     }
   }]
 }
