@@ -7,6 +7,7 @@ $video-image-width: 450px;
 
 $sm-video-image-height: 220px;
 $sm-video-image-width: 340px;
+$card-width: 300px;
 
 .feature {
   background-image: url('/assets/images/goldcoast-demo-rachel+sarah.JPG');
@@ -219,18 +220,70 @@ $sm-video-image-width: 340px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   .hb-section {
     max-width: $max-site-width;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    box-sizing: border-box;
+
+    .color-blue {
+      color: $primary-blue;
+    }
+
+    .color-red {
+      color: $primary-red;
+    }
 
     .hb-title{
       text-transform: uppercase;
+    }
 
-      .color-blue {
-        color: $primary-blue;
+    .motto {
+      text-transform: uppercase;
+    }
+
+    .hb-description{
+      margin-bottom: 40px;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    .values-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+      .value-card{
+        box-sizing: border-box;
+        width: $card-width;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px 20px;
+        margin: 20px 20px;
+
+
+        h3 {
+          font-family: 'PT Sans', sans-serif;
+          font-size: 24px;
+        }
+
+        .values-icon {
+          height: 100px;
+        }
       }
+    }
+
+
+  }
+
+  .book-now {
+    .blue-accent-button{
+      background-color: $primary-blue;
+      color: white;
+      width: 150px;
+      height: 48px;
     }
 
   }
