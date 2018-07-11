@@ -16,7 +16,7 @@
     "e2e": "ng e2e",
     "build:ssr": "npm-run-all build:client-and-server-bundles webpack:server build:functions move-index",
     "serve:ssr": "firebase serve",
-    "build:functions": "cd functions && npm run build && cd ..",
+    "build:functions": "cd functions && npm install && npm run build && cd ..",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "build:client-and-server-bundles": "npm run build:prod && ng run hapkido-website:server",
     "move-index": "mv ./dist/browser/index.html ./functions/lib/index.html",
