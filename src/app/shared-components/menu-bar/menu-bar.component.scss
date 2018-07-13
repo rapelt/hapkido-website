@@ -1,0 +1,47 @@
+@import "../../../variables";
+$menu-height: 120px;
+$image-height: $menu-height - 20px;
+
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $menu-height;
+  padding: 20px  40px;
+
+  @media (max-width: $breakpoint-md) {
+    .desktop-buttons {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .mobile-buttons {
+      display: none;
+    }
+  }
+
+  img {
+    height: $image-height
+  }
+
+  .menu-button {
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 0 10px;
+  }
+
+  .icon-button {
+    padding: 0;
+    min-width: 44px;
+  }
+
+  .sign-in-button {
+    color: $primary-blue;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 0 10px;
+  }
+}
