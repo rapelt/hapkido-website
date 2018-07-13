@@ -77,7 +77,6 @@ $class-card-width: 600px;
       min-width: 44px;
     }
 
-
     .sign-in-button {
       color: $primary-blue;
       background-color: white;
@@ -103,13 +102,7 @@ $class-card-width: 600px;
       padding: 0px 50px;
     }
 
-    .accent-button {
-      color: $primary-blue;
-      background-color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
-    }
+
 
 
 
@@ -225,6 +218,14 @@ $class-card-width: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  .accent-button {
+    color: $primary-blue;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 0 10px;
+  }
 
   .color-blue {
     color: $primary-blue;
@@ -353,6 +354,10 @@ $class-card-width: 600px;
       flex-direction: column;
       text-align: left;
 
+      @media (max-width: 800px) {
+        width: 90%;
+      }
+
       .content {
         display: flex;
         justify-content: flex-start;
@@ -368,14 +373,24 @@ $class-card-width: 600px;
           height: 200px;
           align-self: center;
           margin-right: -20px;
+
+          @media (max-width: 600px) {
+            display: none;
+          }
         }
       }
+
+      $info-column-max-width: 500px;
 
       .info {
         display: flex;
         justify-content: space-between;
         $info-border: 1px solid #ebebeb;
         border-top: 1px solid #ebebeb;
+
+        @media (max-width: $info-column-max-width) {
+          flex-direction: column;
+        }
 
 
         h4 {
@@ -391,22 +406,27 @@ $class-card-width: 600px;
           padding-right: 20px;
           padding-left: 20px;
           margin-top: 10px;
+
+          @media (max-width: $info-column-max-width) {
+            border: none;
+          }
         }
 
         .times {
           border-right:  $info-border;
           padding-right: 20px;
           margin-top: 10px;
+          padding-left: 20px;
+
+          @media (max-width: $info-column-max-width) {
+            border: none;
+          }
         }
 
         p {
           margin-top: 5px;
           margin-bottom: 0px;
         }
-      }
-
-      @media (max-width: 800px) {
-        width: 100%;
       }
 
       .classes-icon {
@@ -416,204 +436,73 @@ $class-card-width: 600px;
 
       .book-now {
         align-self: flex-end;
+        padding-left: 20px;
+
+        @media (max-width: $info-column-max-width) {
+          align-self: flex-start;
+          margin-top: 20px;
+        }
       }
     }
 
 
   }
-}
 
-
-
-
-
-
-
-
-
-/*
-@import "../../variables";
-@import '~@angular/material/theming';
-@import "../../hapkido-theme";
-
-$menu-height: 120px;
-$image-height: $menu-height - 20px;
-$video-image-height: 270px;
-$video-image-width: 450px;
-
-$sm-video-image-height: 220px;
-$sm-video-image-width: 340px;
-
-.feature{
-  display: flex;
-  justify-content: center;
-}
-
-app-feature-image {
-  position: relative;
-}
-
-.feature-content {
-  width: 90%;
-  max-width: $max-site-width - 80px;
-  position: absolute;
-  height: 100%;
-
-  .menu-bar {
+  .free-trial-section {
+    max-width: 1200px;
+    width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: $menu-height;
+    justify-content: space-between;
+    background-color: $primary-blue;
+    color: white;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 
-    width: 100%;
-
-    @media (max-width: $breakpoint-md) {
-      .desktop-buttons {
-        display: none;
-      }
-    }
-
-    @media (min-width: $breakpoint-md) {
-      .mobile-buttons {
-        display: none;
-      }
+    @media (max-width: $max-site-width) {
+      width: 100%;
     }
 
     img {
-      height: $image-height
-    }
-
-    .menu-button {
-      color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
-
-    }
-
-    .sign-in-button {
-      color: $primary-blue;
+      height: 46px;
       background-color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
-    }
-  }
-
-  .feature-text {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .accent-button {
-      color: $primary-blue;
-      background-color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
+      padding: 4px;
+      border-radius: 50px;
+      margin: 10px;
     }
 
-    @media (max-width: $breakpoint-md) {
-      flex-direction: column;
-    }
-
-    .text{
-      width: 50%;
-
-      padding-right: 50px;
-      color: white;
-
-      @media (max-width: $breakpoint-md) {
-        text-align: center;
-        width: 75%;
-        padding-right: 0px;
-      }
-
-      h1 {
-        font-size: 44px;
-        font-weight: 100;
-
-        @media (max-width: $breakpoint-lg) {
-          font-size: 28px;
-        }
-
-        @media (max-width: $breakpoint-sm) {
-          font-size: 24px;
-        }
-
-        b {
-          color: #FEDB38;
-          font-weight: 900;
-        }
-      }
-
-
-    }
-
-    video {
-      display: none;
-    }
-
-    .video {
-
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    h2 {
-      font-weight: 300;
-      max-width: 300px;
-    }
-
-    .video-images {
+    button {
+      padding: 0px 0px;
+      margin: 0px 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      border-radius: 25px;
-      background: url(/assets/images/hbw-video.png);
-      background-position: left top;
-      opacity: 0.8;
-      height: $video-image-height;
-      width: $video-image-width;
-      background-size: $video-image-width $video-image-height;
-      background-repeat: no-repeat;
-      border: 4px solid white;
-
-      @media (max-width: $breakpoint-md) {
-        height: $sm-video-image-height;
-        width: $sm-video-image-width;
-      }
-
-      .play-icon {
-        height: 60px;
-        width: 60px;
-        border-radius: 50px;
-        border: 0px solid black;
-        transition: border 0.4s linear;
-        margin: 0.5em;
-      }
-
-      &:hover {
-        background: url(/assets/images/hbw-video.gif);
-        background-size: $video-image-width $video-image-height;
-        background-repeat: no-repeat;
-        background-position: left top;
-        cursor: pointer;
-
-        @media (max-width: $breakpoint-md) {
-          background-size: $sm-video-image-width $sm-video-image-height;
-
-        }
-
-        .play-icon:hover {
-          border: 5px solid white;
-          border-color: rgba(255, 255, 255, 0.2); // 50% opacity
-        }
-      }
-
+      width: 14%;
+      min-width: 88px;
     }
 
   }
+
+  .footer-section {
+    max-width: 1200px;
+    width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    background-color: $darker-blue;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    font-size: 20px;
+    justify-content: flex-end;
+
+    @media (max-width: $max-site-width) {
+      width: 100%;
+    }
+  }
 }
-*/

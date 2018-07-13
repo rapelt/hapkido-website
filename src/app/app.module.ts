@@ -14,6 +14,7 @@ import {MaterialModule} from './material/material.module';
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
+import {SocialMediaButtonsComponent} from './shared-components/social-media-buttons/social-media-buttons.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {GoogleAnalyticsService} from './services/google-analytics.service';
     HomeComponent,
     Page1Component,
     ToolbarComponent,
-    FeatureImageComponent
+    FeatureImageComponent,
+    SocialMediaButtonsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

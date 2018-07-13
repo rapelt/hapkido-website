@@ -1,0 +1,24 @@
+
+@import '~@angular/material/theming';
+@import "../../../hapkido-theme";
+@import "../../../variables";
+
+.social-media-icons {
+  i {
+    color: white;
+    font-size: 0.8em;
+    width: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    border: 1px solid white;
+    border-radius: 0.8em;
+    margin: 0px 5px;
+  }
+
+  :hover {
+    i {
+      color: mat-color($candy-app-accent);
+    }
+  }
+
+}
