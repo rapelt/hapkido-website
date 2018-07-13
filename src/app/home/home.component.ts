@@ -12,6 +12,7 @@ import {GoogleAnalyticsService} from '../services/google-analytics.service';
 export class HomeComponent implements OnInit {
 
   shouldPlayVideo = false;
+  opened = false;
 
   constructor( private analytics: GoogleAnalyticsService) { }
 
@@ -35,6 +36,10 @@ export class HomeComponent implements OnInit {
     this.shouldPlayVideo = true;
     const elem: HTMLVideoElement = <HTMLVideoElement> document.getElementById('backgroundvid');
     screenfull.request(elem);
+  }
+
+  swapMenu() {
+    this.opened = !this.opened;
   }
 
 }

@@ -1,90 +1,17 @@
 @import "../../variables";
 
-$menu-height: 120px;
-$image-height: $menu-height - 20px;
 $video-image-height: 270px;
 $video-image-width: 450px;
 
 $sm-video-image-height: 220px;
 $sm-video-image-width: 340px;
-$card-width: 300px;
-$class-card-width: 600px;
+$card-width: 340px;
+$class-card-width: 640px;
 
-.feature {
-  background-image: url('/assets/images/goldcoast-demo-rachel+sarah.JPG');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0 0 688px 0px;
-
-  @media (min-width: $breakpoint-xl) {
-    background-size: contain;
-  }
-
-  @media (max-width: $breakpoint-lg) {
-    background-position: left center;
-  }
-
-  h1 {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  }
-
-  .color-overlay {
-    margin-top: 32px;
-    height: 688px;
-    max-width: $max-site-width;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(41,98,255,0.8), rgba(183, 28, 28, 0.8));
-  }
-
-  .menu-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: $menu-height;
-    padding: 20px  40px;
-
-    @media (max-width: $breakpoint-md) {
-      .desktop-buttons {
-        display: none;
-      }
-    }
-
-    @media (min-width: $breakpoint-md) {
-      .mobile-buttons {
-        display: none;
-      }
-    }
-
-    img {
-      height: $image-height
-    }
-
-    .menu-button {
-      color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
-    }
-
-    .icon-button {
-      padding: 0;
-      min-width: 44px;
-    }
-
-    .sign-in-button {
-      color: $primary-blue;
-      background-color: white;
-      border: 1px solid white;
-      border-radius: 4px;
-      margin: 0 10px;
-    }
-  }
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   .feature-text {
     position: relative;
@@ -101,10 +28,6 @@ $class-card-width: 600px;
     @media (min-width: $breakpoint-md) {
       padding: 0px 50px;
     }
-
-
-
-
 
     .text {
       width: 50%;
@@ -212,12 +135,6 @@ $class-card-width: 600px;
 
     }
   }
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 
   .accent-button {
     color: $primary-blue;
@@ -242,6 +159,13 @@ $class-card-width: 600px;
     text-align: center;
     box-sizing: border-box;
 
+    .book-now {
+      /deep/ button {
+        width: 150px;
+        height: 48px;
+      }
+    }
+
     .hb-title{
       text-transform: uppercase;
     }
@@ -262,13 +186,8 @@ $class-card-width: 600px;
       flex-wrap: wrap;
       margin-bottom: 40px;
 
-      .value-card{
-        box-sizing: border-box;
+      /deep/ app-card {
         width: $card-width;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 20px 20px;
-        margin: 20px 20px;
-
 
         h3 {
           font-family: 'PT Sans', sans-serif;
@@ -280,34 +199,9 @@ $class-card-width: 600px;
         }
       }
     }
-
-
   }
 
-  .book-now {
-    .blue-accent-button{
-      background-color: $primary-blue;
-      color: white;
-      width: 150px;
-      height: 48px;
-    }
-
-  }
-
-  .testimonials {
-    background-image: url('/assets/images/testimonials.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'PT Sans', sans-serif;
-    box-sizing: border-box;
-    padding: 10px;
-
+  app-background-image {
     h2 {
       text-transform: uppercase;
     }
@@ -343,19 +237,15 @@ $class-card-width: 600px;
       text-transform: uppercase;
     }
 
-    .classes-card {
-      box-sizing: border-box;
+    app-card {
       width: $class-card-width;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding: 20px 20px;
-      margin: 20px 20px;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       text-align: left;
 
       @media (max-width: 800px) {
-        width: 90%;
+        width: 100%;
       }
 
       .content {
@@ -435,6 +325,11 @@ $class-card-width: 600px;
       }
 
       .book-now {
+        /deep/ button {
+          width: 150px;
+          height: 48px;
+        }
+
         align-self: flex-end;
         padding-left: 20px;
 
@@ -445,45 +340,6 @@ $class-card-width: 600px;
       }
     }
 
-
-  }
-
-  .free-trial-section {
-    max-width: 1200px;
-    width: $max-site-width;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $primary-blue;
-    color: white;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-
-    @media (max-width: $max-site-width) {
-      width: 100%;
-    }
-
-    img {
-      height: 46px;
-      background-color: white;
-      padding: 4px;
-      border-radius: 50px;
-      margin: 10px;
-    }
-
-    button {
-      padding: 0px 0px;
-      margin: 0px 20px;
-      display: flex;
-      justify-content: center;
-      width: 14%;
-      min-width: 88px;
-    }
 
   }
 
@@ -504,5 +360,14 @@ $class-card-width: 600px;
     @media (max-width: $max-site-width) {
       width: 100%;
     }
+  }
+
+  .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
   }
 }

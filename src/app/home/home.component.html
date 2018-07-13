@@ -1,97 +1,88 @@
 <div class="home">
-  <app-toolbar></app-toolbar>
-  <section class="feature">
-    <div class="color-overlay">
-      <div class="menu">
-        <div class="menu-bar">
-          <img src="/assets/icons/196-hb-icon.png" alt="Hapkido Brisbane logo with a man flipping, yin and yang symbol and Korean writing for Hapkido">
-          <div class="desktop-buttons">
-            <button id="ga-menu-button" role="button" class="menu-button ga-menu-button" mat-button>Home</button>
-            <button role="button" class="menu-button ga-menu-button" mat-button>About</button>
-            <button role="button" class="menu-button ga-menu-button" mat-button>News</button>
-            <button role="button" class="sign-in-button ga-menu-button" mat-button>SIGN IN</button>
-          </div>
-
-          <div class="mobile-buttons">
-            <button role="button" class="menu-button icon-button ga-menu-button" mat-button aria-label="Mobile Menu button"><i class="fas fa-bars"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="feature-text">
-          <div class="text">
-            <h1>
-              We believe <b>defending yourself is a right</b> not a privilege.
-            </h1>
-            <button class="accent-button ga-feature-book-now" mat-button>Book now</button>
-            <p>BOOK A FREE TRIAL TODAY</p>
-
-          </div>
-          <div class="video">
-            <button role="button" class="video-images" (click)="playVideo()">
-              <img class="play-icon" src="assets/icons/playvideo.png" alt="Play video">
-            </button>
-
-         <!--   <iframe *ngIf="shouldPlayVideo" id="backgroundvid" src="http://www.youtube.com/embed/W7qWa52k-nE"
-                    frameborder="0" allowfullscreen></iframe>
--->
-            <video controls id="backgroundvid" preload="auto">
-              <source src="assets/video/hbw-video.webm" type="video/webm">
-              <source src="assets/video/hbw-video.mp4" type="video/mp4">
-              <p>This browser does not support the video element.</p>
-            </video>
-          </div>
-        </div>
+  <app-feature [image]="'goldcoast-demo-rachel+sarah.JPG'">
+    <div class="feature-text">
+      <div class="text">
+        <h1>
+          We believe <b>defending yourself is a right</b> not a privilege.
+        </h1>
+        <app-book-now-button [color]="'white'" [round]="true" [GATag]="'ga-feature-book-now'"></app-book-now-button>
+        <p>BOOK A FREE TRIAL TODAY</p>
 
       </div>
-
+      <div class="video">
+        <button role="button" class="video-images" (click)="playVideo()">
+          <img class="play-icon" src="assets/icons/playvideo.png" alt="Play video">
+        </button>
+        <video controls id="backgroundvid" preload="auto">
+          <source src="assets/video/hbw-video.webm" type="video/webm">
+          <source src="assets/video/hbw-video.mp4" type="video/mp4">
+          <p>This browser does not support the video element.</p>
+        </video>
+      </div>
     </div>
-  </section>
+  </app-feature>
+
   <div class="hb-section">
     <h2 class="hb-title">Hapkido <span class="color-blue">Brisbane</span></h2>
-    <p class="motto">Integrity <span class="color-blue">&#8226;</span> Respect <span class="color-red">&#8226;</span> Discipline</p>
+    <p class="motto">Integrity <span class="color-blue">&#8226;</span> Respect <span class="color-red">&#8226;</span>
+      Discipline</p>
     <p class="hb-description">
-      At Hapkido Brisbane we believe being able to defend yourself is a right not a privilege. We are dedicated to teaching self defence to anyone willing to learn and are commited to providing a fun and safe environment for everyone to learn.
+      At Hapkido Brisbane we believe being able to defend yourself is a right not a privilege. We are dedicated to
+      teaching self defence to anyone willing to learn and are commited to providing a fun and safe environment for
+      everyone to learn.
     </p>
     <div class="values-cards">
-      <div class="value-card">
+      <app-card>
         <img src="/assets/icons/lifelong.png" class="values-icon" alt="Martial arts uniform top">
         <h3>Lifelong values</h3>
-        <p>Integrity, respect and discipline are the core values all Hapkido Students learn and live by. It is how we train safely together and how we continue to create a friendly environment for everyone to train together. </p>
-      </div>
-      <div class="value-card">
+        <p>Integrity, respect and discipline are the core values all Hapkido Students learn and live by. It is how we
+          train safely together and how we continue to create a friendly environment for everyone to train
+          together. </p>
+      </app-card>
+      <app-card>
         <img src="/assets/icons/fit-with-fun.png" class="values-icon" alt="Character kicking punching bag">
         <h3>Get with with fun</h3>
-        <p>Every class provides plenty of exercise for every fitness level. Each class covers a basic warm up, kicking, punching, techniques, breakfalls and lot more. Class is never boring or monotonous when learning Hapkido. </p>
-      </div>
-      <div class="value-card">
+        <p>Every class provides plenty of exercise for every fitness level. Each class covers a basic warm up, kicking,
+          punching, techniques, breakfalls and lot more. Class is never boring or monotonous when learning Hapkido. </p>
+      </app-card>
+      <app-card>
         <img src="/assets/icons/practical.png" class="values-icon" alt="Man standing in a martial arts ready stance">
         <h3>Practical skills</h3>
-        <p>Hapkido is a martial arts that is focused on practical self defence skills. Students learn useful skills from the first class to be able to defend themselves from punches, kicks, grabs and lots more.</p>
-      </div>
+        <p>Hapkido is a martial arts that is focused on practical self defence skills. Students learn useful skills from
+          the first class to be able to defend themselves from punches, kicks, grabs and lots more.</p>
+      </app-card>
     </div>
     <div class="book-now">
-      <button class="blue-accent-button ga-hb-section-book-now" mat-button>Book now</button>
+      <app-book-now-button [round]="false" [GATag]="'ga-hb-section-book-now'" [color]="'blue'"></app-book-now-button>
+
+      <!--
+            <button class="blue-accent-button ga-hb-section-book-now" mat-button>Book now</button>
+      -->
       <p>BOOK A FREE TRIAL TODAY</p>
     </div>
   </div>
 
-  <div class="testimonials">
-
+  <app-background-image [image]="'testimonials.jpg'">
     <h2>Testimonials</h2>
-    <p class="testimonial">"The whole Hapkido experience is one I can recommend to everyone. I train with both my sons three times a week. This not only gives us a common goal but the chance to spend quality time together and support each other with training."</p>
+    <p class="testimonial">"The whole Hapkido experience is one I can recommend to everyone. I train with both my sons
+      three times a week. This not only gives us a common goal but the chance to spend quality time together and support
+      each other with training."</p>
     <p class="author">Wayne</p>
-  </div>
+  </app-background-image>
+
+
   <div class="classes-section">
     <h2>What we <span class="color-blue">offer</span></h2>
     <p class="call-to-action">Book your free trial today</p>
     <div class="classes-cards">
-      <div class="classes-card">
+      <app-card>
         <div class="content">
           <img src="/assets/icons/classes-adults-icon.png" class="classes-icon" alt="Adults class icon">
           <div>
             <h3>Adults Class</h3>
-            <p>Adults class focuses on learning practical self defence and fitness. Hapkido is designed for all fitness levels and techniques can be tailored to accomodate any existing injuries. Classes are designed to keep the mind and body active.</p>
+            <p>Adults class focuses on learning practical self defence and fitness. Hapkido is designed for all fitness
+              levels and techniques can be tailored to accomodate any existing injuries. Classes are designed to keep
+              the mind and body active.</p>
           </div>
           <img src="/assets/images/hapkido-stance.png" class="hapkido-stance" alt="Hapkido ready stance">
 
@@ -106,18 +97,21 @@
             <p> Tuesday & Thursday 6:30 - 7:30pm </p>
           </div>
           <div class="book-now">
-            <button class="blue-accent-button ga-home-adults-book-now" mat-button>Book now</button>
+            <app-book-now-button [round]="false" [GATag]="'ga-home-adults-book-now'"
+                                 [color]="'blue'"></app-book-now-button>
           </div>
         </div>
 
-      </div>
+      </app-card>
 
-      <div class="classes-card">
+      <app-card>
         <div class="content">
           <img src="/assets/icons/classes-family-icon.png" class="classes-icon" alt="Family class icon">
           <div>
             <h3>Family Class</h3>
-            <p>Family class focuses on having fun and learning the basics. Classes are designed to help teach respect, discipline and team work. Children learn the same techniques as the Adults making the transition to Adults class easy. Parents are encouraged to participate with their children.</p>
+            <p>Family class focuses on having fun and learning the basics. Classes are designed to help teach respect,
+              discipline and team work. Children learn the same techniques as the Adults making the transition to Adults
+              class easy. Parents are encouraged to participate with their children.</p>
           </div>
           <img src="/assets/images/hapkido-stance.png" class="hapkido-stance" alt="Hapkido ready stance">
         </div>
@@ -128,24 +122,21 @@
           </div>
           <div class="times">
             <h4>Times:</h4>
-            <p> Tuesday & Thursday 5:30 - 6:20pm  </p>
+            <p> Tuesday & Thursday 5:30 - 6:20pm </p>
 
           </div>
           <div class="book-now">
-            <button class="blue-accent-button ga-home-family-book-now" mat-button>Book now</button>
+            <app-book-now-button [round]="false" [GATag]="'ga-home-family-book-now'"
+                                 [color]="'blue'"></app-book-now-button>
           </div>
         </div>
 
-      </div>
+      </app-card>
     </div>
 
   </div>
 
-  <div class="free-trial-section">
-    <img src="/assets/icons/kick.png" class="classes-icon" alt="Kicking icon">
-    <h3>Free trial class! Try a class at Hapkido Brisbane today.</h3>
-    <button class="accent-button ga-footer-book-now" mat-button>Book now</button>
-  </div>
+  <app-free-trial-bar></app-free-trial-bar>
 
   <div class="footer-section">
     <app-social-media-buttons></app-social-media-buttons>

@@ -15,6 +15,14 @@ import {ToolbarComponent} from './toolbar/toolbar.component';
 import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
 import {SocialMediaButtonsComponent} from './shared-components/social-media-buttons/social-media-buttons.component';
+import {FreeTrialBarComponent} from './shared-components/free-trial-bar/free-trial-bar.component';
+import {BookNowButtonComponent} from './shared-components/book-now-button/book-now-button.component';
+import {BackgroundImageComponent} from './shared-components/background-image/background-image.component';
+import {CardComponent} from './shared-components/card/card.component';
+import {MenuBarComponent} from './shared-components/menu-bar/menu-bar.component';
+import {FeatureComponent} from './shared-components/feature/feature.component';
+import {SidenavService} from './services/sidenav.service';
+import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +31,14 @@ import {SocialMediaButtonsComponent} from './shared-components/social-media-butt
     Page1Component,
     ToolbarComponent,
     FeatureImageComponent,
-    SocialMediaButtonsComponent
+    SocialMediaButtonsComponent,
+    FreeTrialBarComponent,
+    BookNowButtonComponent,
+    BackgroundImageComponent,
+    CardComponent,
+    MenuBarComponent,
+    FeatureComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -34,7 +49,8 @@ import {SocialMediaButtonsComponent} from './shared-components/social-media-butt
     MaterialModule
   ],
   providers: [
-    GoogleAnalyticsService
+    GoogleAnalyticsService,
+    SidenavService
   ],
   bootstrap: [AppComponent]
 })
