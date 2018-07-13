@@ -7,14 +7,12 @@ import {MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatSid
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
   ],
 })
 export class MaterialModule { }
