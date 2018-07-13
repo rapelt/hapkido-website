@@ -6,6 +6,6 @@ import {Subject} from 'rxjs';
 })
 export class SidenavService {
 
-  sideNav: Subject = new Subject();
+  sideNav: Subject<any> = new Subject();
 
 }

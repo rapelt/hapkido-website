@@ -8,10 +8,10 @@ import {Component, Input, OnInit} from '@angular/core';
 export class BookNowButtonComponent implements OnInit {
 
   @Input()
-  GATag;
+  GATag = '';
 
   @Input()
-  color;
+  color = '';
 
   @Input()
   round = false;

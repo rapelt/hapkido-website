@@ -12,7 +12,6 @@ import {Angulartics2Module} from 'angulartics2';
 import {Angulartics2GoogleTagManager} from 'angulartics2/gtm';
 import {MaterialModule} from './material/material.module';
 import {ToolbarComponent} from './toolbar/toolbar.component';
-import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
 import {SocialMediaButtonsComponent} from './shared-components/social-media-buttons/social-media-buttons.component';
 import {FreeTrialBarComponent} from './shared-components/free-trial-bar/free-trial-bar.component';
@@ -30,7 +29,6 @@ import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
     HomeComponent,
     Page1Component,
     ToolbarComponent,
-    FeatureImageComponent,
     SocialMediaButtonsComponent,
     FreeTrialBarComponent,
     BookNowButtonComponent,

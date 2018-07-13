@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FreeTrialBarComponent } from './free-trial-bar.component';
+import {BookNowButtonComponent} from '../book-now-button/book-now-button.component';
 
 describe('FreeTrialBarComponent', () => {
   let component: FreeTrialBarComponent;
@@ -8,7 +9,10 @@ describe('FreeTrialBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FreeTrialBarComponent ]
+      declarations: [
+        FreeTrialBarComponent,
+        BookNowButtonComponent
+      ]
     })
     .compileComponents();
   }));

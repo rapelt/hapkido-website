@@ -8,7 +8,7 @@ import {SidenavService} from './services/sidenav.service';
 })
 export class AppComponent implements OnInit{
   title = 'app';
-  opened = true;
+  opened = false;
 
   constructor(private sidenavService: SidenavService) {
 
