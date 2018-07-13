@@ -8,6 +8,7 @@ $video-image-width: 450px;
 $sm-video-image-height: 220px;
 $sm-video-image-width: 340px;
 $card-width: 300px;
+$class-card-width: 600px;
 
 .feature {
   background-image: url('/assets/images/goldcoast-demo-rachel+sarah.JPG');
@@ -22,6 +23,10 @@ $card-width: 300px;
 
   @media (max-width: $breakpoint-lg) {
     background-position: left center;
+  }
+
+  h1 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   }
 
   .color-overlay {
@@ -221,20 +226,20 @@ $card-width: 300px;
   justify-content: center;
   flex-direction: column;
 
+  .color-blue {
+    color: $primary-blue;
+  }
+
+  .color-red {
+    color: $primary-red;
+  }
+
   .hb-section {
     max-width: $max-site-width;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     box-sizing: border-box;
-
-    .color-blue {
-      color: $primary-blue;
-    }
-
-    .color-red {
-      color: $primary-red;
-    }
 
     .hb-title{
       text-transform: uppercase;
@@ -285,6 +290,135 @@ $card-width: 300px;
       width: 150px;
       height: 48px;
     }
+
+  }
+
+  .testimonials {
+    background-image: url('/assets/images/testimonials.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 10px;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      background-position: center center;
+    }
+
+    p {
+      max-width: $max-site-width;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .author {
+      font-size: 20px;
+    }
+
+  }
+
+  .classes-section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    .call-to-action {
+      text-transform: uppercase;
+    }
+
+    .classes-card {
+      box-sizing: border-box;
+      width: $class-card-width;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 20px 20px;
+      margin: 20px 20px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: left;
+
+      .content {
+        display: flex;
+        justify-content: flex-start;
+
+        h3 {
+          text-transform: uppercase;
+          color: $primary-blue;
+          font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+
+        }
+
+        .hapkido-stance {
+          height: 200px;
+          align-self: center;
+          margin-right: -20px;
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        $info-border: 1px solid #ebebeb;
+        border-top: 1px solid #ebebeb;
+
+
+        h4 {
+          text-transform: uppercase;
+          color: $primary-blue;
+          font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+          margin-bottom: 0px;
+          margin-top: 0px;
+        }
+
+        .age {
+          border-right: $info-border;
+          padding-right: 20px;
+          padding-left: 20px;
+          margin-top: 10px;
+        }
+
+        .times {
+          border-right:  $info-border;
+          padding-right: 20px;
+          margin-top: 10px;
+        }
+
+        p {
+          margin-top: 5px;
+          margin-bottom: 0px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+
+      .classes-icon {
+        height: 100px;
+        margin-right: 20px;
+      }
+
+      .book-now {
+        align-self: flex-end;
+      }
+    }
+
 
   }
 }
