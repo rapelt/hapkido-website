@@ -13,6 +13,7 @@ import {FreeTrialBarComponent} from '../shared-components/free-trial-bar/free-tr
 import {CardComponent} from '../shared-components/card/card.component';
 import {SocialMediaButtonsComponent} from '../shared-components/social-media-buttons/social-media-buttons.component';
 import {BackgroundImageComponent} from '../shared-components/background-image/background-image.component';
+import {FooterComponent} from '../shared-components/footer/footer.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -29,7 +30,8 @@ describe('HomeComponent', () => {
         FreeTrialBarComponent,
         CardComponent,
         SocialMediaButtonsComponent,
-        BackgroundImageComponent
+        BackgroundImageComponent,
+        FooterComponent
       ],
       imports: [
         MaterialModule,

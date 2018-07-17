@@ -6,6 +6,9 @@ import {FeatureComponent} from '../shared-components/feature/feature.component';
 import {CardComponent} from '../shared-components/card/card.component';
 import {BackgroundImageComponent} from '../shared-components/background-image/background-image.component';
 import {MenuBarComponent} from '../shared-components/menu-bar/menu-bar.component';
+import {FooterComponent} from '../shared-components/footer/footer.component';
+import {SocialMediaButtonsComponent} from '../shared-components/social-media-buttons/social-media-buttons.component';
+import {FreeTrialBarComponent} from '../shared-components/free-trial-bar/free-trial-bar.component';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -19,7 +22,10 @@ describe('AboutComponent', () => {
         FeatureComponent,
         CardComponent,
         BackgroundImageComponent,
-        MenuBarComponent
+        MenuBarComponent,
+        FooterComponent,
+        SocialMediaButtonsComponent,
+        FreeTrialBarComponent
       ]
     })
     .compileComponents();

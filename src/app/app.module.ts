@@ -23,6 +23,7 @@ import {FeatureComponent} from './shared-components/feature/feature.component';
 import {SidenavService} from './services/sidenav.service';
 import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
 import {AboutComponent} from './about/about.component';
+import {FooterComponent} from './shared-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {AboutComponent} from './about/about.component';
     MenuBarComponent,
     FeatureComponent,
     SidenavComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

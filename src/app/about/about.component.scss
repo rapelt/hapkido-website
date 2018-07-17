@@ -110,6 +110,10 @@
     box-sizing: border-box;
     text-align: center;
 
+    @media (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+    }
+
     app-card {
       margin: 20px;
 
@@ -120,18 +124,74 @@
       ul {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
-        height: 200px;
+        box-sizing: border-box;
+        justify-content: center;
 
         list-style-type: none;
         padding: 0;
         margin: 0;
 
         li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 200px;
+
+          i {
+            margin: 10px 20px;
+            color: $primary-blue;
+          }
 
         }
       }
     }
+  }
+
+  .book-now {
+    text-align: center;
+
+    /deep/ button {
+      width: 150px;
+      height: 48px;
+    }
+  }
+
+  .hapkido {
+    display: flex;
+    justify-content: center;
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: left;
+
+    .accent-text {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 900;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+
+    }
+
+    h2 {
+      color: $primary-blue;
+    }
+  }
+
+  .hapkido-brisbane {
+    display: flex;
+    justify-content: center;
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: left;
+
+    h2 {
+      color: $primary-blue;
+    }
+
+
   }
 
 
