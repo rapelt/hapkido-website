@@ -12,6 +12,7 @@
   font-family: 'PT Sans', sans-serif;
   box-sizing: border-box;
   padding: 10px;
+  background-size: cover;
 
   @media (max-width: $breakpoint-lg) {
     background-position: center center;

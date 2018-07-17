@@ -1,0 +1,69 @@
+@import "../../variables";
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  /deep/ app-feature {
+    .feature {
+      padding: 0 0 570px 0;
+
+      .color-overlay {
+        height: 570px;
+      }
+    }
+  }
+
+  .color-yellow {
+    color: $primary-yellow;
+  }
+
+  .feature-text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 50px;
+
+    app-book-now-button {
+      margin-top: 50px;
+
+      /deep/ button {
+        width: 150px;
+        height: 48px;
+        margin-top: 40px;
+      }
+    }
+
+    .text {
+      text-align: center;
+      color: white;
+
+      h1 {
+        font-size: 44px;
+        font-weight: 100;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 28px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+
+}

@@ -22,6 +22,7 @@ import {MenuBarComponent} from './shared-components/menu-bar/menu-bar.component'
 import {FeatureComponent} from './shared-components/feature/feature.component';
 import {SidenavService} from './services/sidenav.service';
 import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
+import {AboutComponent} from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
     CardComponent,
     MenuBarComponent,
     FeatureComponent,
-    SidenavComponent
+    SidenavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
