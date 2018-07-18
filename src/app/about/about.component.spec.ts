@@ -9,6 +9,7 @@ import {MenuBarComponent} from '../shared-components/menu-bar/menu-bar.component
 import {FooterComponent} from '../shared-components/footer/footer.component';
 import {SocialMediaButtonsComponent} from '../shared-components/social-media-buttons/social-media-buttons.component';
 import {FreeTrialBarComponent} from '../shared-components/free-trial-bar/free-trial-bar.component';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -26,6 +27,9 @@ describe('AboutComponent', () => {
         FooterComponent,
         SocialMediaButtonsComponent,
         FreeTrialBarComponent
+      ],
+      imports: [
+        RouterTestingModule
       ]
     })
     .compileComponents();
