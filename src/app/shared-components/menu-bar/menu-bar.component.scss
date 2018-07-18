@@ -32,6 +32,14 @@ $image-height: $menu-height - 20px;
     margin: 0 10px;
   }
 
+  .menu-button.active {
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 0 10px;
+    background-color: $primary-blue;
+  }
+
   .icon-button {
     padding: 0;
     min-width: 44px;
@@ -40,6 +48,14 @@ $image-height: $menu-height - 20px;
   .sign-in-button {
     color: $primary-blue;
     background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin: 0 10px;
+  }
+
+  .sign-in-button.active {
+    color: white;
+    background-color: $primary-blue;
     border: 1px solid white;
     border-radius: 4px;
     margin: 0 10px;

@@ -1,8 +1,8 @@
 <div class="sidenav">
-  <button mat-button color="accent">Home</button>
-  <button mat-button color="accent">About</button>
-  <button mat-button color="accent">News</button>
-  <button mat-button color="accent">Contact Us</button>
+  <button mat-button color="accent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</button>
+  <button mat-button color="accent" routerLinkActive="active" routerLink="/about">About</button>
+  <button mat-button color="accent" routerLinkActive="active" routerLink="/news">News</button>
+  <button mat-button color="accent" routerLinkActive="active" routerLink="/contact">Contact Us</button>
 
 
 </div>
