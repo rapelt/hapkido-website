@@ -3,10 +3,16 @@
     <button mat-button color="accent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="close()">Home</button>
     <button class="close" mat-button color="accent" routerLinkActive="active" (click)="close()"><i class="fas fa-times"></i></button>
   </div>
-  <button mat-button color="accent" routerLinkActive="active" routerLink="/about" (click)="close()">About</button>
+  <button class="dropdown-btn" mat-button color="accent" routerLinkActive="active" (click)="toggleDropdown()">About <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-container" [ngStyle]="{ height: dropdownOpen ? '300px' : '0'}">
+    <button mat-button color="accent">Hapkido</button>
+    <button mat-button color="accent">Timetable</button>
+    <button mat-button color="accent">Pricing</button>
+    <button mat-button color="accent">FAQs</button>
+    <button mat-button color="accent">Kumdo</button>
+
+  </div>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/news" (click)="close()">News</button>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/contact" (click)="close()">Contact Us</button>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/signin" (click)="close()">Sign In</button>
-
-
 </div>

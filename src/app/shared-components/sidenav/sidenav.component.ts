@@ -8,6 +8,8 @@ import {SidenavService} from '../../services/sidenav.service';
 })
 export class SidenavComponent implements OnInit {
 
+  dropdownOpen = false;
+
   constructor(private sideNavService: SidenavService) { }
 
   ngOnInit() {
@@ -15,6 +17,10 @@ export class SidenavComponent implements OnInit {
 
   close() {
     this.sideNavService.sideNav.next();
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
   }
 
 }

@@ -9,6 +9,10 @@ $image-height: $menu-height - 20px;
   height: $menu-height;
   padding: 20px  40px;
 
+  .desktop-buttons {
+    display: flex;
+  }
+
   @media (max-width: $breakpoint-md) {
     .desktop-buttons {
       display: none;
@@ -58,6 +62,40 @@ $image-height: $menu-height - 20px;
     background-color: $primary-blue;
     border: 1px solid white;
     border-radius: 4px;
-    margin: 0 10px;
   }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+
+  .dropdown-content a {
+    color: $primary-blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+
+  }
+
+  .dropdown-content a:hover {
+    background-color: $primary-blue;
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color: $darker-blue;}
+
 }

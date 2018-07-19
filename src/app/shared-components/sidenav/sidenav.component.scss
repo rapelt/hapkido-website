@@ -10,6 +10,7 @@
     padding: 20px 40px;
     width: 100%;
     text-align: left;
+    background-color: white;
 
   }
 
@@ -28,5 +29,23 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .dropdown-btn{
+    background-color: white;
+  }
+
+  .dropdown-container {
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    z-index: -100;
+    width: 100%;
+    box-sizing: border-box;
+
+    button {
+      padding-left: 60px;    }
+
   }
 }
