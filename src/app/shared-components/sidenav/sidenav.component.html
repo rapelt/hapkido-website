@@ -1,8 +1,12 @@
 <div class="sidenav">
-  <button mat-button color="accent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="close()">Home</button>
+  <div class="top">
+    <button mat-button color="accent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="close()">Home</button>
+    <button class="close" mat-button color="accent" routerLinkActive="active" (click)="close()"><i class="fas fa-times"></i></button>
+  </div>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/about" (click)="close()">About</button>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/news" (click)="close()">News</button>
   <button mat-button color="accent" routerLinkActive="active" routerLink="/contact" (click)="close()">Contact Us</button>
+  <button mat-button color="accent" routerLinkActive="active" routerLink="/signin" (click)="close()">Sign In</button>
 
 
 </div>
