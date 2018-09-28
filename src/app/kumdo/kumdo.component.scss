@@ -9,6 +9,14 @@
     color: $primary-yellow;
   }
 
+  /deep/ app-feature {
+    .feature {
+      @media (max-width: $breakpoint-lg) {
+        background-position: center center;
+      }
+    }
+  }
+
   .feature-text {
     position: relative;
     display: flex;
@@ -107,6 +115,7 @@
         flex-wrap: wrap;
         box-sizing: border-box;
         justify-content: center;
+        text-align: left;
 
         list-style-type: none;
         padding: 0;

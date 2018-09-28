@@ -13,6 +13,17 @@ $class-card-width: 640px;
   justify-content: center;
   flex-direction: column;
 
+
+  /deep/ app-feature {
+    .feature {
+      padding: 0 0 688px 0;
+
+      .color-overlay {
+        height: 688px;
+      }
+    }
+  }
+
   .feature-text {
     position: relative;
     display: flex;

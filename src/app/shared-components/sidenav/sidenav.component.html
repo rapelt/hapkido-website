@@ -6,10 +6,10 @@
   <button class="dropdown-btn ga-menu-button" mat-button color="accent" (click)="toggleDropdown()">About <i class="fa fa-caret-down"></i></button>
   <div class="dropdown-container" [ngStyle]="{ height: dropdownOpen ? '300px' : '0'}">
     <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/about/hapkido" (click)="close()">Hapkido</button>
-    <button class="ga-menu-button" mat-button color="accent">Timetable</button>
-    <button class="ga-menu-button" mat-button color="accent">Pricing</button>
-    <button class="ga-menu-button" mat-button color="accent">FAQs</button>
-    <button class="ga-menu-button" mat-button color="accent">Kumdo</button>
+    <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/about/timetable" (click)="close()">Timetable</button>
+    <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/about/pricing" (click)="close()">Pricing</button>
+    <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/about/faqs" (click)="close()">FAQs</button>
+    <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/about/kumdo" (click)="close()">Kumdo</button>
 
   </div>
   <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" routerLink="/news" (click)="close()">News</button>
