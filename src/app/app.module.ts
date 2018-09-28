@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
-import { Page1Component } from './page1/page1.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {Angulartics2Module} from 'angulartics2';
 import {Angulartics2GoogleTagManager} from 'angulartics2/gtm';
@@ -24,13 +23,21 @@ import {SidenavService} from './services/sidenav.service';
 import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
 import {AboutComponent} from './about/about.component';
 import {FooterComponent} from './shared-components/footer/footer.component';
+import {TimetableComponent} from './timetable/timetable.component';
+import {PricingComponent} from './pricing/pricing.component';
+import {KumdoComponent} from './kumdo/kumdo.component';
+import {NewsComponent} from './news/news.component';
+import {ContactComponent} from './contact/contact.component';
+import {FaqsComponent} from './faqs/faqs.component';
+import {BookNowComponent} from './book-now/book-now.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    Page1Component,
+    TimetableComponent,
     ToolbarComponent,
+    PricingComponent,
     SocialMediaButtonsComponent,
     FreeTrialBarComponent,
     BookNowButtonComponent,
@@ -40,7 +47,12 @@ import {FooterComponent} from './shared-components/footer/footer.component';
     FeatureComponent,
     SidenavComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    KumdoComponent,
+    NewsComponent,
+    ContactComponent,
+    FaqsComponent,
+    BookNowComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

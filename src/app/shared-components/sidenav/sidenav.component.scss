@@ -10,8 +10,11 @@
     padding: 20px 40px;
     width: 100%;
     text-align: left;
+    line-height: 16px;
     background-color: white;
-
+    display: flex;
+    align-items: center;
+    height: 68px;
   }
 
   .active {
@@ -31,16 +34,15 @@
     justify-content: space-between;
   }
 
-  .dropdown-btn{
+  /*.dropdown-btn{
     background-color: white;
-  }
+  }*/
 
   .dropdown-container {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 0;
-    z-index: -100;
     width: 100%;
     box-sizing: border-box;
 

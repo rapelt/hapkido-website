@@ -87,6 +87,11 @@ $image-height: $menu-height - 20px;
     display: block;
     border-radius: 4px;
 
+    &.active {
+      background-color: $primary-blue;
+      color: white;
+    }
+
   }
 
   .dropdown-content a:hover {

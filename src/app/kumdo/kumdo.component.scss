@@ -1,6 +1,6 @@
 @import "../../variables";
 
-.about {
+.kumdo {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -55,7 +55,7 @@
     }
   }
 
-  .history {
+  .kumdo {
     max-width: $max-site-width;
     margin-left: auto;
     margin-right: auto;
@@ -78,20 +78,7 @@
     }
   }
 
-  /deep/ app-background-image {
-    .background-image {
-      background-position: bottom center;
-
-    }
-  }
-
-  app-background-image {
-    h1 {
-      font-family: 'PT Sans', sans-serif;
-    }
-  }
-
-  .benefits {
+  .what-you-will-learn {
     display: flex;
     justify-content: center;
     max-width: $max-site-width;
@@ -99,6 +86,10 @@
     margin-right: auto;
     box-sizing: border-box;
     text-align: center;
+
+    .list-title {
+      margin-right: 30px;
+    }
 
     @media (max-width: $breakpoint-md) {
       flex-wrap: wrap;
@@ -125,63 +116,18 @@
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          width: 200px;
+          margin-bottom: 20px;
 
-          i {
+          .label {
             margin: 10px 20px;
             color: $primary-blue;
+            font-weight: 900;
+            min-width: 80px;
           }
 
         }
       }
     }
-  }
-
-  .book-now {
-    text-align: center;
-
-    /deep/ button {
-      width: 150px;
-      height: 48px;
-    }
-  }
-
-  .hapkido {
-    display: flex;
-    justify-content: center;
-    max-width: $max-site-width;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    text-align: left;
-
-    .accent-text {
-      font-size: 18px;
-      text-align: center;
-      font-weight: 900;
-      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-
-    }
-
-    h2 {
-      color: $primary-blue;
-    }
-  }
-
-  .hapkido-brisbane {
-    display: flex;
-    justify-content: center;
-    max-width: $max-site-width;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    text-align: left;
-
-    h2 {
-      color: $primary-blue;
-    }
-
-
   }
 
 
