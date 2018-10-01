@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatCardModule,
   MatCheckboxModule, MatExpansionModule,
+  MatIconModule,
+  MatMenuModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -11,6 +14,7 @@ import {
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
+    MatIconModule,
     MatSidenavModule,
     MatExpansionModule
   ],
@@ -18,6 +22,7 @@ import {
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
+    MatIconModule,
     MatSidenavModule,
     MatExpansionModule
   ],

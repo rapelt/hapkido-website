@@ -5,16 +5,18 @@
   justify-content: center;
   flex-direction: column;
 
-  .color-yellow {
-    color: $primary-yellow;
-  }
-
   /deep/ app-feature {
     .feature {
-      @media (max-width: $breakpoint-lg) {
-        background-position: center center;
+      padding: 0 0 570px 0;
+
+      .color-overlay {
+        height: 570px;
       }
     }
+  }
+
+  .color-yellow {
+    color: $primary-yellow;
   }
 
   .feature-text {

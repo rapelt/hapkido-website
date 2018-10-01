@@ -1,4 +1,13 @@
 <app-toolbar></app-toolbar>
+<!--<mat-sidenav-container>
+  <mat-sidenav role="navigation" #sidenav mode="over" [(opened)]="opened">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content role="main">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>-->
+
 <div class="app">
   <div class="sidebar" [ngClass]="{ hide: !opened}" [ngStyle]="{ width: opened ? '100%' : '0%',  marginLeft: opened ? '0px' : '-300px'}">
     <app-sidenav [ngClass]="{ hide: !opened}"></app-sidenav>
