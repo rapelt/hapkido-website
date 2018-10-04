@@ -12,7 +12,8 @@ import {BookNowComponent} from './book-now/book-now.component';
 
 const routes: Routes = [{
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    pathMatch: 'full'
   },
   {
     path: 'about/hapkido',
@@ -45,6 +46,10 @@ const routes: Routes = [{
   {
     path: 'book-now',
     component: BookNowComponent
+  },
+  {
+    path: '**',
+    component: HomeComponent
   }
 ];
 
