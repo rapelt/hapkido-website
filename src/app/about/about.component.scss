@@ -1,0 +1,196 @@
+@import "../../variables";
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .color-yellow {
+    color: $primary-yellow;
+  }
+
+  /deep/ app-feature {
+    .feature {
+      @media (max-width: $breakpoint-lg) {
+        background-position: center center;
+      }
+    }
+  }
+
+  .feature-text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 50px;
+
+    app-book-now-button {
+      margin-top: 50px;
+
+      /deep/ button {
+        width: 150px;
+        height: 48px;
+        margin-top: 40px;
+      }
+    }
+
+    .text {
+      text-align: center;
+      color: white;
+
+      h1 {
+        font-size: 44px;
+        font-weight: 100;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 28px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .history {
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+
+    h2 {
+      color: $primary-blue;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $primary-blue;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
+  /deep/ app-background-image {
+    .background-image {
+      background-position: bottom center;
+
+    }
+  }
+
+  app-background-image {
+    h1 {
+      font-family: 'PT Sans', sans-serif;
+    }
+  }
+
+  .benefits {
+    display: flex;
+    justify-content: center;
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+
+    @media (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+    }
+
+    app-card {
+      margin: 20px;
+
+      h2 {
+        color: $primary-blue;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: center;
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 200px;
+
+          i {
+            margin: 10px 20px;
+            color: $primary-blue;
+          }
+
+        }
+      }
+    }
+  }
+
+  .book-now {
+    text-align: center;
+
+    /deep/ button {
+      width: 150px;
+      height: 48px;
+    }
+  }
+
+  .hapkido {
+    display: flex;
+    justify-content: center;
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: left;
+
+    .accent-text {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 900;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+
+    }
+
+    h2 {
+      color: $primary-blue;
+    }
+  }
+
+  .hapkido-brisbane {
+    display: flex;
+    justify-content: center;
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: left;
+
+    h2 {
+      color: $primary-blue;
+    }
+
+
+  }
+
+
+}

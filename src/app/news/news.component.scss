@@ -1,0 +1,82 @@
+@import "../../variables";
+
+.news {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .color-yellow {
+    color: $primary-yellow;
+  }
+
+  .feature-text {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 50px;
+
+    app-book-now-button {
+      margin-top: 50px;
+
+      /deep/ button {
+        width: 150px;
+        height: 48px;
+        margin-top: 40px;
+      }
+    }
+
+    .text {
+      text-align: center;
+      color: white;
+
+      h1 {
+        font-size: 44px;
+        font-weight: 100;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-md) {
+          font-size: 28px;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .news {
+    max-width: $max-site-width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+
+    h2 {
+      color: $primary-blue;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      color: $primary-blue;
+      font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+
+
+}

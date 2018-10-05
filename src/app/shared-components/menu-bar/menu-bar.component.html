@@ -1,0 +1,37 @@
+<div class="menu-bar">
+  <img src="/assets/icons/196-hb-icon.png" alt="Hapkido Brisbane logo with a man flipping, yin and yang symbol and Korean writing for Hapkido">
+  <div class="desktop-buttons">
+    <div>
+      <button id="ga-menu-button"
+              role="button"
+              class="menu-button ga-menu-button"
+              mat-button
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+              routerLink="/">Home</button>
+    </div>
+    <div class="dropdown">
+      <button role="button" class="menu-button dropbtn ga-menu-button hover" routerLinkActive="active" mat-button routerLink="/about">About <i class="fas fa-angle-down"></i></button>
+      <div class="dropdown-content">
+        <a class="ga-menu-button" routerLinkActive="active" routerLink="/about/hapkido">Hapkido</a>
+        <a class="ga-menu-button" routerLinkActive="active" routerLink="/about/timetable">Timetable</a>
+        <a class="ga-menu-button" routerLinkActive="active" routerLink="/about/pricing">Pricing</a>
+        <a class="ga-menu-button" routerLinkActive="active" routerLink="/about/faqs">FAQs</a>
+        <a class="ga-menu-button" routerLinkActive="active" routerLink="/about/kumdo">Kumdo</a>
+      </div>
+    </div>
+    <div>
+      <button role="button" class="menu-button ga-menu-button" routerLinkActive="active" routerLink="/news" mat-button>News</button>
+    </div>
+    <div>
+      <button role="button" class="menu-button ga-menu-button" routerLinkActive="active" routerLink="/contact" mat-button>Contact</button>
+    </div>
+    <div>
+      <button role="button" class="sign-in-button ga-menu-button" routerLinkActive="active" routerLink="/signin" mat-button>SIGN IN</button>
+    </div>
+  </div>
+
+  <div class="mobile-buttons">
+    <button role="button" class="menu-button icon-button ga-menu-button" mat-button aria-label="Mobile Menu button" (click)="toggleSideNav()"><i class="fas fa-bars"></i></button>
+  </div>
+</div>

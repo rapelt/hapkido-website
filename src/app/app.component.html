@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<app-toolbar></app-toolbar>
+<div class="app">
+  <div class="sidebar" [ngClass]="{ hide: !opened}" [ngStyle]="{ width: opened ? '100%' : '0%',  marginLeft: opened ? '0px' : '-300px'}">
+    <app-sidenav [ngClass]="{ hide: !opened}"></app-sidenav>
+  </div>
+  <div class="content" [ngClass]="{ hide: opened}">
+    <div class="overlay">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

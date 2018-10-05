@@ -12,6 +12,7 @@ import {GoogleAnalyticsService} from '../services/google-analytics.service';
 export class HomeComponent implements OnInit {
 
   shouldPlayVideo = false;
+  opened = false;
 
   constructor( private analytics: GoogleAnalyticsService) { }
 
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
         elem.play();
         this.analytics.send('Start', 'Video - 30 Seconds of Hapkido', Math.floor(elem.currentTime).toString() + ' seconds');
       } else {
+        this.shouldPlayVideo = false;
         elem.pause();
         this.analytics.send('Stop', 'Video - 30 Seconds of Hapkido', Math.floor(elem.currentTime).toString() + ' seconds');
         elem.load();
@@ -34,6 +36,10 @@ export class HomeComponent implements OnInit {
     this.shouldPlayVideo = true;
     const elem: HTMLVideoElement = <HTMLVideoElement> document.getElementById('backgroundvid');
     screenfull.request(elem);
+  }
+
+  swapMenu() {
+    this.opened = !this.opened;
   }
 
 }

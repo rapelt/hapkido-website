@@ -1,0 +1,20 @@
+@import "../../../variables";
+
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'PT Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 10px;
+  background-size: cover;
+
+  @media (max-width: $breakpoint-lg) {
+    background-position: center center;
+  }
+}
