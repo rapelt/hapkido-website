@@ -7,6 +7,7 @@ import {ToolbarComponent} from './toolbar/toolbar.component';
 import {SidenavComponent} from './shared-components/sidenav/sidenav.component';
 import {SocialMediaButtonsComponent} from './shared-components/social-media-buttons/social-media-buttons.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({

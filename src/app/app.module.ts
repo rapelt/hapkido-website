@@ -30,13 +30,13 @@ import {NewsComponent} from './news/news.component';
 import {ContactComponent} from './contact/contact.component';
 import {FaqsComponent} from './faqs/faqs.component';
 import {BookNowComponent} from './book-now/book-now.component';
+import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TimetableComponent,
-    ToolbarComponent,
     PricingComponent,
     SocialMediaButtonsComponent,
     FreeTrialBarComponent,
@@ -52,8 +52,10 @@ import {BookNowComponent} from './book-now/book-now.component';
     NewsComponent,
     ContactComponent,
     FaqsComponent,
-    BookNowComponent
-  ],
+    BookNowComponent,
+    ToolbarComponent,
+    FeatureImageComponent
+],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
