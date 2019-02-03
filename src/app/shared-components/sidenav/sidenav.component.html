@@ -1,7 +1,7 @@
 <div class="sidenav">
   <div class="top">
     <button class="ga-menu-button" mat-button color="accent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/" (click)="close()">Home</button>
-    <button class="close ga-menu-button" mat-button color="accent" routerLinkActive="active" (click)="close()"><i class="fas fa-times"></i></button>
+    <button class="close ga-menu-button" mat-button color="accent" routerLinkActive="active" (click)="close()" aria-label="Close"><i class="fas fa-times"></i></button>
   </div>
   <button class="dropdown-btn ga-menu-button" mat-button color="accent" (click)="toggleDropdown()">About <i class="fa fa-caret-down"></i></button>
   <div class="dropdown-container" [ngStyle]="{ height: dropdownOpen ? '300px' : '0'}">

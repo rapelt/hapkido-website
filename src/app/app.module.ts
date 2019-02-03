@@ -31,6 +31,9 @@ import {ContactComponent} from './contact/contact.component';
 import {FaqsComponent} from './faqs/faqs.component';
 import {BookNowComponent} from './book-now/book-now.component';
 import {FeatureImageComponent} from './shared-components/feature-image/feature-image.component';
+import {TimetableService} from './timetable/timetable.service';
+import {HttpClientModule} from '@angular/common/http';
+import {AlphabetSortPipe} from './pipes/alphabet-sort.pipe';
 
 @NgModule({
   declarations: [
@@ -54,19 +57,22 @@ import {FeatureImageComponent} from './shared-components/feature-image/feature-i
     FaqsComponent,
     BookNowComponent,
     ToolbarComponent,
-    FeatureImageComponent
-],
+    FeatureImageComponent,
+    AlphabetSortPipe
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
     Angulartics2Module.forRoot([Angulartics2GoogleTagManager]),
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [
     GoogleAnalyticsService,
-    SidenavService
+    SidenavService,
+    TimetableService,
   ],
   bootstrap: [AppComponent]
 })

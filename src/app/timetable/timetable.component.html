@@ -3,15 +3,42 @@
     <div class="feature-text">
       <div class="text">
         <h1>Time<span class="color-yellow">Table</span></h1>
-        <p>Hapkido Brisbane runs classes twice a week for colour belt students and 3 times a week for black belts and sword students. We also run other <a href="/about/events">events</a> on weekends to suppliment regular training with workshops, gradings, competitions and social activities.</p>
+        <div *ngIf="nextclasses">
+          <h3 class="color-yellow">Next Class</h3>
+          <p>{{nextclasses[0].classType}} class {{nextclasses[0].date | date: 'h:mma'}}, {{nextclasses[0].date | date: 'EEEE, d MMM y'}}</p>
+          <p>{{nextclasses[1].classType}} class {{nextclasses[1].date | date: 'h:mma'}}, {{nextclasses[1].date | date: 'EEEE, d MMM y'}}</p>
+        </div>
+        <!--
+                <p>Hapkido Brisbane runs classes twice a week for colour belt students and 3 times a week for black belts and sword students. We also run other <a href="/about/events">events</a> on weekends to suppliment regular training with workshops, gradings, competitions and social activities.</p>
+        -->
         <app-book-now-button [color]="'white'" [round]="true" [GATag]="'ga-feature-book-now'"></app-book-now-button>
       </div>
     </div>
   </app-feature>
   <div class="schedule">
     <h2>Class Schedule</h2>
-    <app-card>
-    </app-card>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+      <tr *ngFor="let aclass of calendarClasses | alphabetSort: 'time'">
+        <td>{{aclass.time}}</td>
+        <td>{{aclass.Sunday}}</td>
+        <td>{{aclass.Monday}}</td>
+        <td>{{aclass.Tuesday}}</td>
+        <td>{{aclass.Wednesday}}</td>
+        <td>{{aclass.Thursday}}</td>
+        <td>{{aclass.Friday}}</td>
+        <td>{{aclass.Saturday}}</td>
+      </tr>
+    </table>
   </div>
 
   <app-free-trial-bar></app-free-trial-bar>

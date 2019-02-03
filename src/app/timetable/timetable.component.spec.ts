@@ -9,6 +9,9 @@ import {CardComponent} from '../shared-components/card/card.component';
 import {MenuBarComponent} from '../shared-components/menu-bar/menu-bar.component';
 import {SocialMediaButtonsComponent} from '../shared-components/social-media-buttons/social-media-buttons.component';
 import {RouterTestingModule} from '@angular/router/testing';
+import {AlphabetSortPipe} from '../pipes/alphabet-sort.pipe';
+import {TimetableService} from './timetable.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('TimetableComponent', () => {
   let component: TimetableComponent;
@@ -23,10 +26,15 @@ describe('TimetableComponent', () => {
         FooterComponent,
         CardComponent,
         MenuBarComponent,
-        SocialMediaButtonsComponent
+        SocialMediaButtonsComponent,
+        AlphabetSortPipe
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
+      ],
+      providers: [
+        TimetableService
       ]
     })
     .compileComponents();
@@ -41,4 +49,9 @@ describe('TimetableComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+/*
+  it('setCalendarClasses should create calendar classes', () => {
+
+    component.setCalendarClasses();
+  });*/
 });
